@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WangDaMiao", "WangDaMiao\WangDaMiao.csproj", "{356CA429-84F3-46CD-9545-FA2B618F9034}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiaoDaDa.Boss", "MiaoDaDa.Boss\MiaoDaDa.Boss.csproj", "{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{356CA429-84F3-46CD-9545-FA2B618F9034}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356CA429-84F3-46CD-9545-FA2B618F9034}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356CA429-84F3-46CD-9545-FA2B618F9034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
