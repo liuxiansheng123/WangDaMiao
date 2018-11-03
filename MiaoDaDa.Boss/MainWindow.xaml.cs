@@ -45,6 +45,9 @@ namespace MiaoDaDa.Boss
             {
                 Methods.UpdateSettingString("userName", _user.UserName);
                 Methods.UpdateSettingString("password", _user.UserPwd);
+                Home home = new Home();
+                home.Show();
+                this.Close();
             }
         }
 
