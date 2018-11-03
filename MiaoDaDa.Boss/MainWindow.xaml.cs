@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WangDaMiao.Requset;
 
 namespace MiaoDaDa.Boss
 {
@@ -20,9 +21,37 @@ namespace MiaoDaDa.Boss
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Users _user = null;
         public MainWindow()
         {
             InitializeComponent();
+            Bindings();
+        }
+
+        private void Bindings()
+        {
+            this.txt_userName.Text = Methods.GetSettingString("userName");
+            this.txt_Pwd.Password = Methods.GetSettingString("password");
+        }
+
+        //登陆功能
+        private void btn_login_Click(object sender, RoutedEventArgs e)
+        {
+            _user = new Users();
+            _user.UserName = this.txt_userName.Text.ToString();
+            _user.UserPwd = this.txt_Pwd.Password.ToString();
+            _user.Code = this.txt_yzm.Text.ToString();
+            if (true)
+            {
+                Methods.UpdateSettingString("userName", _user.UserName);
+                Methods.UpdateSettingString("password", _user.UserPwd);
+            }
+        }
+
+        //获取验证码
+        private void btn_gain_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
