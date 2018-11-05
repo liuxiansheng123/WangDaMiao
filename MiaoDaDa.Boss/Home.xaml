@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MiaoDaDa.Boss"
         mc:Ignorable="d"
+        
         Title="王大喵家的" Height="450" Width="800">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#FFACACB4" Offset="1.0"/>
+                <!--<GradientStop Color="#FFACACB4" Offset="1.0"/>-->
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -24,6 +25,7 @@
             <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
         <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+
         <!-- <Button x:Name="start">启动</Button>-->
     </Grid>
 </Window>

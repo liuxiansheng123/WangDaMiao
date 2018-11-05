@@ -23,5 +23,9 @@ namespace MiaoDaDa.Boss
         {
             InitializeComponent();
         }
+        public void Copy()
+        {
+            
+        }
     }
 }

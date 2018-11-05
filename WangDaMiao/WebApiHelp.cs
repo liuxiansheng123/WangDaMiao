@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,26 +11,45 @@ namespace WangDaMiao
 {
     public class WebApiHelp
     {
-        HttpClient myhttpClient = new HttpClient();
-        private Uri _url = null;
-
-        public void _connection(string str)
+        private string HttpPost(string Url, string postDataStr)
         {
-            if (!string.IsNullOrWhiteSpace(str))
-            {
-                _url = new Uri(str);
-            }
+            CookieContainer cookie = new CookieContainer();
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = Encoding.UTF8.GetByteCount(postDataStr);
+            request.CookieContainer = cookie;
+            Stream myRequestStream = request.GetRequestStream();
+            StreamWriter myStreamWriter = new StreamWriter(myRequestStream, Encoding.GetEncoding("gb2312"));
+            myStreamWriter.Write(postDataStr);
+            myStreamWriter.Close();
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            response.Cookies = cookie.GetCookies(response.ResponseUri);
+            Stream myResponseStream = response.GetResponseStream();
+            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("utf-8"));
+            string retString = myStreamReader.ReadToEnd();
+            myStreamReader.Close();
+            myResponseStream.Close();
+
+            return retString;
         }
 
-        public void GetRequest()
+        public string HttpGet(string Url, string postDataStr)
         {
-            myhttpClient.BaseAddress = _url;
-            HttpResponseMessage response = myhttpClient.GetAsync("api/ApiDemo/Get2").Result;
-            string result = "";
-            if (response.IsSuccessStatusCode)
-            {
-                result = response.Content.ReadAsStringAsync().Result;
-            }
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url + (postDataStr == "" ? "" : "?") + postDataStr);
+            request.Method = "GET";
+            request.ContentType = "text/html;charset=UTF-8";
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream myResponseStream = response.GetResponseStream();
+            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.GetEncoding("utf-8"));
+            string retString = myStreamReader.ReadToEnd();
+            myStreamReader.Close();
+            myResponseStream.Close();
+
+            return retString;
         }
 
 
