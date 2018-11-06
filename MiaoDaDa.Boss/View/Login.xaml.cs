@@ -12,20 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MiaoDaDa.Boss
+namespace MiaoDaDa.Boss.View
 {
     /// <summary>
-    /// Home.xaml 的交互逻辑
+    /// Login.xaml 的交互逻辑
     /// </summary>
-    public partial class Home : Window
+    public partial class Login : Window
     {
-        public Home()
+        public Login()
         {
             InitializeComponent();
         }
-        public void Copy()
+
+        private void txtPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            
+
         }
     }
 }
