@@ -6,6 +6,7 @@
         mc:Ignorable="d"
         xmlns:ViewModel="clr-namespace:MiaoDaDa.Boss.ViewModel"
         d:DataContext="{d:DesignInstance ViewModel:ViewLoginModel}"
+        xmlns:v="clr-namespace:MiaoDaDa.Boss.Tool"
         Title="王大喵家的" Height="240" Width="400">
     <Window.DataContext>
         <ViewModel:ViewLoginModel/>
@@ -25,7 +26,9 @@
         <Label Grid.Row="1" Grid.Column="0" Content="_Name:"></Label>
         <TextBox Grid.Row="1" Grid.Column="1" Name="txtName" Height="30" Text="{Binding UserNames, UpdateSourceTrigger=PropertyChanged}"></TextBox>
         <Label Grid.Row="2" Grid.Column="0" Content="_Password"></Label>
-        <TextBox Grid.Row="2" Grid.Column="1" Name="txtPassword" Height="30" Text="{Binding UserPwds, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <PasswordBox  Grid.Row="2" Grid.Column="1" Name="txtPassword" Height="30" v:PasswordBoxHelper.Attach="True" v:PasswordBoxHelper.Password="{Binding UserPwds, UpdateSourceTrigger=PropertyChanged}">
+        </PasswordBox>
+        <!--<TextBox Grid.Row="2" Grid.Column="1" Name="txtPassword" Height="30" Text="{Binding UserPwds, UpdateSourceTrigger=PropertyChanged}"></TextBox>-->
         <Button Grid.Row="3" Grid.Column="0"  Name="logins" HorizontalAlignment="Left" Width="60"  Margin="6,0,0,0" IsEnabled="{Binding IsLoginEnabled,Mode=OneWay}" Command="{Binding LoginCommand}">Login</Button>
     </Grid>
 </Window>

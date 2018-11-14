@@ -75,7 +75,7 @@ namespace MiaoDaDa.Boss.ViewModel
             {
                 if (UserNames == null || UserPwds == null)
                     return false;
-                if (String.IsNullOrEmpty(UserNames.Trim()) || string.IsNullOrEmpty(UserPwds.Trim()))
+                if (string.IsNullOrEmpty(UserNames.Trim()) || string.IsNullOrEmpty(UserPwds.Trim()))
                     return false;
                 else
                     return true;

@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -57,8 +58,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Tool\Methods.cs" />
+    <Compile Include="Tool\PasswordBoxHelper.cs" />
     <Compile Include="ViewModel\DelegateCommand.cs" />
     <Compile Include="ViewModel\ObservableObject.cs" />
+    <Compile Include="ViewModel\TurnModel.cs" />
     <Compile Include="ViewModel\ViewLoginModel.cs" />
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -67,7 +70,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="View\TurnForm.xaml.cs">
+      <DependentUpon>TurnForm.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TurnForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,5 +117,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="img\logo.png" />
+    <Resource Include="img\world.png" />
+    <Resource Include="img\XML文件.png" />
+    <Resource Include="img\上-背景.png" />
+    <Resource Include="img\下-形状.png" />
+    <Resource Include="img\使用指南.png" />
+    <Resource Include="img\关闭.png" />
+    <Resource Include="img\技术支持.png" />
+    <Resource Include="img\最小化.png" />
+    <Resource Include="img\转换.png" />
+    <Resource Include="img\选题题库.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
