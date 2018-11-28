@@ -12,17 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MyWfpDome.View
+namespace MiaoDaDa.Boss.View
 {
     /// <summary>
-    /// UserView.xaml 的交互逻辑
+    /// Login.xaml 的交互逻辑
     /// </summary>
-    public partial class UserView : Window
+    public partial class Login : Window
     {
-        public UserView()
+        public Login()
         {
             InitializeComponent();
         }
-
     }
 }
