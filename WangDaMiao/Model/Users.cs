@@ -8,12 +8,14 @@ namespace WangDaMiao.Requset
 {
     public class Users
     {
-        public string UserName { get; set; }
+        private string _userName;
+        private string _userPwd;
+        private string _cookie;
+        private string _code;
 
-        public string UserPwd { get; set; }
-
-        public string Cookie { get; set; }
-
-        public string Code { get; set; }
+        public string UserName { get => _userName; set => _userName = value; }
+        public string UserPwd { get => _userPwd; set => _userPwd = value; }
+        public string Cookie { get => _cookie; set => _cookie = value; }
+        public string Code { get => _code; set => _code = value; }
     }
 }
