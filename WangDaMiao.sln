@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WangDaMiao", "WangDaMiao\Wa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiaoDaDa.Boss", "MiaoDaDa.Boss\MiaoDaDa.Boss.csproj", "{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWfpDome", "MyWfpDome\MyWfpDome.csproj", "{6F6085FF-601F-443F-A830-73593E872602}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC1F9649-6CEE-4A26-A85A-31C4EDA9A43C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F6085FF-601F-443F-A830-73593E872602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F6085FF-601F-443F-A830-73593E872602}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F6085FF-601F-443F-A830-73593E872602}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F6085FF-601F-443F-A830-73593E872602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
